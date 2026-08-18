@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel Pet - Editar Reserva em Andamento</title>
+<link rel="stylesheet" href="global.css">
+</head>
+<body>
+
+  <aside class="sidebar">
+    <div class="brand">Hotel Pet</div>
+    <ul class="nav-list">
+      <li class="nav-item"><a href="#">🐾 Pet</a></li>
+      <li class="nav-item"><a href="#">👤 Usuários</a></li>
+      <li class="nav-item"><a href="#">⚙ Configurações</a></li>
+      <li class="nav-item active"><a href="#">📖 Reservas</a></li>
+    </ul>
+  </aside>
+
+  <div class="main-wrapper">
+    <header class="header">
+      <div class="user-profile">
+        <div class="avatar-circle">👤</div>
+        <span>João da Silva</span>
+      </div>
+    </header>
+
+    <main class="content">
+      <div class="breadcrumb">Home / revervas / editar reserva</div>
+
+      <div class="card-container">
+        <h1 class="page-title">Editar reserva</h1>
+
+        <form>
+          <div class="form-group">
+            <label for="proprietario">Proprietário *</label>
+            <input type="text" id="proprietario" class="form-control" value="José da Silva">
+          </div>
+
+          <div class="form-group">
+            <label for="pet">Pet *</label>
+            <input type="text" id="pet" class="form-control" value="Max">
+          </div>
+
+          <div class="form-group">
+            <label>Período *</label>
+            <div class="date-row">
+              <input type="date" class="form-control" value="2021-05-02">
+              <input type="date" class="form-control" value="2021-05-07">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="notas">Notas</label>
+            <textarea id="notas" class="form-control">Lorem ipsum dolor sit amet, consectet ui i iadipiscing elit.</textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="status">Status*</label>
+            <select id="status" class="form-control">
+              <option value="em_andamento" selected>Em andamento</option>
+              <option value="concluido">Concluído</option>
+              <option value="cancelado">Cancelado</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="anotacoes">Anotações do funcionário</label>
+            <textarea id="anotacoes" class="form-control">Lorem ipsum dolor sit amet, consectet ui i iadipiscing elit.</textarea>
+          </div>
+
+          <div class="image-upload-group">
+            <div class="image-placeholder"></div>
+            <div class="add-image-btn">+</div>
+          </div>
+
+          <div class="total-price">
+            Total das diárias: <span>R$ 40,00</span>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn-primary">💾 Salvar</button>
+            <button type="reset" class="btn-secondary">↺ Limpar</button>
+          </div>
+        </form>
+      </div>
+    </main>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel Pet - Pets</title>
+<link rel="stylesheet" href="global.css">
+</head>
+<body>
+
+  <aside class="sidebar">
+    <div class="brand">Hotel Pet</div>
+    <ul class="nav-list">
+      <li class="nav-item active"><a href="#">🐾 Pets</a></li>
+      <li class="nav-item"><a href="#">👤 Usuários</a></li>
+      <li class="nav-item"><a href="#">⚙ Configurações</a></li>
+      <li class="nav-item"><a href="#">📖 Reservas</a></li>
+    </ul>
+  </aside>
+
+  <div class="main-wrapper">
+    <header class="header">
+      <div class="user-profile">
+        <div class="avatar-circle">👤</div>
+        <span>João da Silva</span>
+      </div>
+    </header>
+
+    <main class="content">
+      <div class="breadcrumb">Home / Pets</div>
+      <h1 class="page-title">Pets</h1>
+
+      <div class="action-bar">
+        <button class="btn-outline">+ Novo Pet</button>
+      </div>
+
+      <div class="filter-card">
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="id">Id</label>
+            <input type="text" id="id" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="raca">raça</label>
+            <input type="text" id="raca" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="nome">nome</label>
+            <input type="text" id="nome" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="tamanho">tamanho</label>
+            <input type="text" id="tamanho" class="form-control">
+          </div>
+        </div>
+        <div class="form-actions">
+          <button class="btn-primary">🔍 Pesquisar</button>
+          <button class="btn-secondary">↺ Limpar</button>
+        </div>
+      </div>
+
+      <div class="table-card">
+        <table class="custom-table">
+          <thead>
+            <tr>
+              <th style="width: 30px;"><input type="checkbox"></th>
+              <th>Id ↓</th>
+              <th>nome ↓</th>
+              <th>tipo ↓</th>
+              <th>raça ↓</th>
+              <th>tamanho ↓</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><input type="checkbox" checked></td>
+              <td>12349984501</td>
+              <td>Max</td>
+              <td>Cachorro</td>
+              <td>Pator Alemão</td>
+              <td>Grande</td>
+              <td class="table-actions">
+                <a href="#">Editar</a>
+                <a href="#">Visualizar</a>
+              </td>
+            </tr>
+            <tr>
+              <td><input type="checkbox"></td>
+              <td>12349984501</td>
+              <td>Ginger</td>
+              <td>Gato</td>
+              <td>Não definida</td>
+              <td>Pequeno</td>
+              <td class="table-actions">
+                <a href="#">Editar</a>
+                <a href="#">Visualizar</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+
+</body>
+</html>

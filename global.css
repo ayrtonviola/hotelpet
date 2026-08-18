@@ -1,0 +1,338 @@
+:root {
+  --color-primary: #d99b26;          /* Amarelo fosco principal */
+  --color-primary-hover: #b8821d;    /* Amarelo mais escuro*/
+  --color-primary-light: #fef7e7;    /* Fundo suave/ativo dos menus */
+  --color-primary-border: #e6b34d;   /* Borda para destaque */
+
+  /* Cores Neutras / Backgrounds */
+  --bg-page: #f9f9fb;                /* Fundo geral da página */
+  --bg-card: #ffffff;                /* Fundo dos cards e contêineres */
+  --bg-sidebar: #ffffff;             /* Fundo da barra lateral */
+  --bg-input: #fafafa;               /* Fundo de inputs e textareas */
+
+  /* Bordas e Linhas */
+  --border-color: #e2e8f0;           /* Borda padrão suave */
+  --border-input: #cbd5e1;           /* Borda de inputs */
+
+  /* Textos */
+  --text-main: #1e293b;              /* Texto principal (escuro elegante) */
+  --text-muted: #64748b;             /* Subtítulos e labels */
+  --text-light: #94a3b8;             /* Textos secundários */
+
+  /* Sombras Modernas */
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.05);
+
+  /* Arredondamento */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+}
+
+/* --- RESET & BASES GLOBAL --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  background-color: var(--bg-page);
+  color: var(--text-main);
+  min-height: 100vh;
+  display: flex;
+}
+
+/* --- LAYOUT PRINCIPAL --- */
+.sidebar {
+  width: 240px;
+  background-color: var(--bg-sidebar);
+  border-right: 1px solid var(--border-color);
+  padding: 24px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.brand {
+  color: var(--color-primary);
+  font-size: 22px;
+  font-weight: 700;
+  padding: 0 24px 30px;
+  letter-spacing: -0.5px;
+}
+
+.nav-list {
+  list-style: none;
+}
+
+.nav-item a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 24px;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.nav-item a:hover {
+  color: var(--color-primary);
+  background-color: var(--color-primary-light);
+}
+
+.nav-item.active a {
+  background-color: var(--color-primary-light);
+  color: var(--color-primary);
+  font-weight: 600;
+  border-right: 3px solid var(--color-primary);
+}
+
+.main-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  height: 64px;
+  background-color: var(--bg-card);
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 32px;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-main);
+}
+
+.avatar-circle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: var(--color-primary-light);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  border: 1px solid var(--color-primary-border);
+}
+
+.content {
+  padding: 32px;
+}
+
+.breadcrumb {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-bottom: 24px;
+}
+
+/* --- CARDS & FORMULÁRIOS --- */
+.card-container {
+  background-color: var(--bg-card);
+  padding: 40px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+  max-width: 900px;
+}
+
+.page-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--text-main);
+  margin-bottom: 28px;
+}
+
+.reservation-form,
+.profile-form {
+  max-width: 440px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.form-control {
+  padding: 10px 14px;
+  border: 1px solid var(--border-input);
+  border-radius: var(--radius-sm);
+  outline: none;
+  background-color: var(--bg-input);
+  font-size: 14px;
+  color: var(--text-main);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  width: 100%;
+}
+
+.form-control:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(217, 155, 38, 0.15);
+  background-color: #ffffff;
+}
+
+.date-range-group {
+  display: flex;
+  gap: 16px;
+}
+
+.date-input-wrapper {
+  flex: 1;
+}
+
+.date-input-wrapper input[type="date"] {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid var(--border-input);
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  background-color: var(--bg-input);
+  color: var(--text-main);
+}
+
+textarea.form-control {
+  resize: vertical;
+  min-height: 100px;
+}
+
+select.form-control {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="%2364748b" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  cursor: pointer;
+}
+
+.dropdown-options-box {
+  border: 1px solid var(--border-color);
+  background: var(--bg-card);
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+  margin-top: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--text-main);
+  box-shadow: var(--shadow-sm);
+}
+
+.total-price {
+  margin: 24px 0;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-main);
+}
+
+.total-price span {
+  color: var(--color-primary);
+  font-weight: 700;
+  margin-left: 6px;
+}
+
+/* --- BOTÕES --- */
+.form-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: #ffffff;
+  border: none;
+  padding: 10px 24px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-hover);
+}
+
+.btn-secondary {
+  background-color: #ffffff;
+  color: var(--text-muted);
+  border: 1px solid var(--border-input);
+  padding: 10px 24px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+/* --- PLACEHOLDERS E TELA DE LOGIN/CADASTRO --- */
+.auth-container {
+  display: flex;
+  width: 100%;
+  max-width: 1000px;
+  height: 560px;
+  margin: auto;
+  box-shadow: var(--shadow-md);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.image-container {
+  flex: 1.2;
+  background-color: #f1f5f9;
+  border-right: 1px solid var(--border-color);
+  position: relative;
+}
+
+.card-auth {
+  flex: 1;
+  background-color: var(--bg-card);
+  padding: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-link {
+  margin-top: 24px;
+  color: var(--color-primary);
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.login-link:hover {
+  text-decoration: underline;
+}
