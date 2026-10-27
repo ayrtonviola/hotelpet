@@ -41,9 +41,9 @@
       <div class="image-section"></div>
       <div class="login-section">
         <div class="brand-title">
-  <img src="pet.png" alt="Logo Hotel Pet">
-  <span>Hotel Pet</span>
-</div>
+          <img src="pet.png" alt="Logo Hotel Pet">
+          <span>Hotel Pet</span>
+        </div>
         <form class="login-form" onsubmit="event.preventDefault(); navigateTo('pets');">
           <div class="form-group">
             <input type="text" class="form-control" placeholder="Login" value="Login">
@@ -63,18 +63,16 @@
         </form>
         <div class="divider"><span>ou</span></div>
         <div class="social-login">
-  <a href="#" class="social-btn" title="Facebook">
-    <img src="facebook.png" alt="Facebook">
-  </a>
-
-  <a href="#" class="social-btn" title="Google">
-    <img src="google.png" alt="Google">
-  </a>
-
-  <a href="#" class="social-btn" title="Apple">
-    <img src="apple.png" alt="Apple">
-  </a>
-</div>
+          <a href="#" class="social-btn" title="Facebook">
+            <img src="facebook.png" alt="Facebook">
+          </a>
+          <a href="#" class="social-btn" title="Google">
+            <img src="google.png" alt="Google">
+          </a>
+          <a href="#" class="social-btn" title="Apple">
+            <img src="apple.png" alt="Apple">
+          </a>
+        </div>
         <a href="#" onclick="navigateTo('criarConta'); return false;" class="create-account-link">Criar uma conta</a>
       </div>
     </div>
@@ -104,7 +102,7 @@
   </section>
 
   <!-- ========================================== -->
-  <!-- ESTRUTURA PRINCIPAL (PAINEL COM SIDEBAR)  -->
+  <!-- ESTRUTURA PRINCIPAL (PAINEL COM SIDEBAR)   -->
   <!-- ========================================== -->
   <div id="app-layout" style="display: none; width: 100%; min-height: 100vh;">
     
@@ -162,22 +160,7 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td><input type="checkbox" checked></td>
-                    <td>12349984501</td><td>Max</td><td>Cachorro</td><td>Pastor Alemão</td><td>Grande</td>
-                    <td class="table-actions">
-                      <a href="#" onclick="navigateTo('editarPet'); return false;">Editar</a>
-                      <a href="#" onclick="navigateTo('visualizarPet'); return false;">Visualizar</a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><input type="checkbox"></td>
-                    <td>12349984502</td><td>Ginger</td><td>Gato</td><td>Não definida</td><td>Pequeno</td>
-                    <td class="table-actions">
-                      <a href="#" onclick="navigateTo('editarPet'); return false;">Editar</a>
-                      <a href="#" onclick="navigateTo('visualizarPet'); return false;">Visualizar</a>
-                    </td>
-                  </tr>
+                  <!-- Preenchido via JavaScript -->
                 </tbody>
               </table>
             </div>
@@ -359,26 +342,7 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td><input type="checkbox" checked></td>
-                    <td><div class="avatar-circle">👤</div></td>
-                    <td>joaodasilva@pet.com</td><td>João da Silva</td><td>Gerente</td>
-                    <td><span class="badge badge-success">Ativo</span></td><td>19/02/2020</td>
-                    <td class="table-actions">
-                      <a href="#" onclick="navigateTo('editarPerfil'); return false;">Editar</a>
-                      <a href="#" onclick="navigateTo('editarPerfil'); return false;">Visualizar</a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><input type="checkbox"></td>
-                    <td><div class="avatar-circle">👤</div></td>
-                    <td>maria@pet.com</td><td>Maria da Silva</td><td>Funcionário</td>
-                    <td><span class="badge badge-danger">Inativo</span></td><td>19/02/2020</td>
-                    <td class="table-actions">
-                      <a href="#" onclick="navigateTo('editarPerfil'); return false;">Editar</a>
-                      <a href="#" onclick="navigateTo('editarPerfil'); return false;">Visualizar</a>
-                    </td>
-                  </tr>
+                  <!-- Preenchido via JavaScript -->
                 </tbody>
               </table>
             </div>
@@ -502,24 +466,7 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td><input type="checkbox" checked></td>
-                    <td>12349984501</td><td>Max</td><td>02/05/2021</td><td>07/05/2021</td>
-                    <td><span class="badge badge-reservada">Reservada</span></td><td>R$ 40,00</td>
-                    <td class="table-actions">
-                      <a href="#" onclick="navigateTo('editReservaEmAndamento'); return false;">Editar</a>
-                      <a href="#" onclick="navigateTo('verReserva'); return false;">Visualizar</a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><input type="checkbox"></td>
-                    <td>12349984502</td><td>Ginger</td><td>02/05/2021</td><td>07/05/2021</td>
-                    <td><span class="badge badge-progresso">Em progresso</span></td><td>R$ 40,00</td>
-                    <td class="table-actions">
-                      <a href="#" onclick="navigateTo('editReservaEmAndamento'); return false;">Editar</a>
-                      <a href="#" onclick="navigateTo('verReserva'); return false;">Visualizar</a>
-                    </td>
-                  </tr>
+                  <!-- Preenchido via JavaScript -->
                 </tbody>
               </table>
             </div>
@@ -598,35 +545,23 @@
         <section id="verReserva" class="page">
           <div style="width: 100%;">
             <div class="breadcrumb">Home / reservas / ver reserva</div>
-            <div class="details-card">
+            <div class="card-container">
               <h1 class="page-title">Ver reserva</h1>
+              <div class="top-actions">
+                <button class="btn-action-outline" onclick="navigateTo('editReservaEmAndamento')">✏️ Editar</button>
+                <button class="btn-action-outline" onclick="if(confirm('Deseja excluir?')) navigateTo('reservas')">✖ Deletar</button>
+              </div>
               <div class="details-list">
                 <div class="detail-row"><span class="detail-label">Id:</span><span class="detail-value">1234099871</span></div>
-                <div class="detail-row"><span class="detail-label">Proprietário:</span><span class="detail-value">José da Silva</span></div>
-                <div class="detail-row"><span class="detail-label">Pet:</span><span class="detail-value"><a href="#" onclick="navigateTo('visualizarPet'); return false;">Max</a></span></div>
-                <div class="detail-row"><span class="detail-label">Chegada:</span><span class="detail-value">02/05/2021</span></div>
-                <div class="detail-row"><span class="detail-label">Partida:</span><span class="detail-value">07/05/2021</span></div>
+                <div class="detail-row"><span class="detail-label">Pet:</span><span class="detail-value">Max</span></div>
+                <div class="detail-row"><span class="detail-label">Período:</span><span class="detail-value">02/05/2021 - 07/05/2021</span></div>
+                <div class="detail-row"><span class="detail-label">Status:</span><span class="detail-value"><span class="badge badge-reservada">Reservada</span></span></div>
+                <div class="detail-row"><span class="detail-label">Total:</span><span class="detail-value">R$ 40,00</span></div>
                 <div class="detail-row"><span class="detail-label">Notas:</span><span class="detail-value">Lorem ipsum dolor sit amet...</span></div>
-                <div class="detail-row"><span class="detail-label">Anotações dos Funcionários:</span><span class="detail-value">Lorem ipsum dolor sit amet...</span></div>
-                <div class="detail-row">
-                  <span class="detail-label">Imagens</span>
-                  <div class="detail-value">
-                    <div class="images-grid">
-                      <div class="image-placeholder"></div>
-                      <div class="image-placeholder"></div>
-                    </div>
-                  </div>
+                <div class="bottom-actions">
+                  <button class="btn-back" onclick="navigateTo('reservas')">← Voltar</button>
                 </div>
-                <div class="detail-row" style="align-items: center;">
-                  <span class="detail-label">Status:</span>
-                  <div class="detail-value"><span class="status-badge">Finalizada</span></div>
-                </div>
-                <div class="detail-row"><span class="detail-label">Total das diárias:</span><span class="detail-value">R$ 40,00</span></div>
-                <div class="detail-row"><span class="detail-label">Recibo:</span><span class="detail-value"><a href="#">📎 recibo.pdf</a></span></div>
-                <div class="detail-row"><span class="detail-label">Criado em:</span><span class="detail-value">02/05/2021</span></div>
-                <div class="detail-row"><span class="detail-label">Atualizado em:</span><span class="detail-value">07/05/2021</span></div>
               </div>
-              <button class="btn-back" onclick="navigateTo('reservas')">← Voltar</button>
             </div>
           </div>
         </section>
@@ -635,48 +570,9 @@
     </div>
   </div>
 
-  <!-- ========================================== -->
-  <!-- SCRIPT DE NAVEGAÇÃO E ROTEAR DAS TELAS    -->
-  <!-- ========================================== -->
-  <script>
-    function navigateTo(pageId) {
-      // 1. Oculta todas as páginas avulsas e do painel
-      document.querySelectorAll('.standalone-page, .page').forEach(page => {
-        page.classList.remove('active-page');
-      });
-
-      // 2. Se for tela fora do painel (login/registro)
-      if (pageId === 'login' || pageId === 'criarConta') {
-        document.getElementById('app-layout').style.display = 'none';
-        document.getElementById(pageId).classList.add('active-page');
-      } else {
-        // Exibe o layout do painel com sidebar
-        document.getElementById('app-layout').style.display = 'flex';
-        
-        // Exibe a tela específica solicitada
-        const targetPage = document.getElementById(pageId);
-        if (targetPage) {
-          targetPage.classList.add('active-page');
-        }
-
-        // Atualiza a opção ativa na barra lateral
-        document.querySelectorAll('.nav-item').forEach(item => item.classList.remove('active'));
-
-        if (['pets', 'cadastrarPet', 'editarPet', 'visualizarPet'].includes(pageId)) {
-          document.getElementById('nav-pets')?.classList.add('active');
-        } else if (['usuarios', 'cadastrarUsuario', 'editarPerfil'].includes(pageId)) {
-          document.getElementById('nav-usuarios')?.classList.add('active');
-        } else if (pageId === 'configuracoes') {
-          document.getElementById('nav-configuracoes')?.classList.add('active');
-        } else if (['reservas', 'fazerReserva', 'editReservaEmAndamento', 'verReserva'].includes(pageId)) {
-          document.getElementById('nav-reservas')?.classList.add('active');
-        }
-      }
-
-      // Rola a tela para o topo
-      window.scrollTo(0, 0);
-    }
-  </script>
-
+  <!-- SCRIPTS JS -->
+  <script src="dados.js"></script>
+  <script src="navegacao.js"></script>
+  <script src="busca.js"></script>
 </body>
 </html>
